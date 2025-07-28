@@ -29,13 +29,6 @@ export default function () {
     },
   ];
 
-
-
-
-
-
-
-
   return (
     <div>
       {/* top section */}
