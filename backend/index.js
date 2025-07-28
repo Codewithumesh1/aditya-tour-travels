@@ -12,8 +12,18 @@ const booknowRouters = require('./routers/booknowRouters');
 const adminRouters = require('./routers/adminRouters');
 
 const corsOptions = {
-  origin: "https://aditya-tour-travels.vercel.app", // Only allow this frontend
-  credentials: true,              // Allow cookies/authorization headers
+  origin: function (origin, callback) {
+    const allowedOrigins = [
+      "http://localhost:3000",
+      "https://aditya-tour-travels.vercel.app"
+    ];
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true,
 };
 // Middlewares
 server.use(cors(corsOptions));
