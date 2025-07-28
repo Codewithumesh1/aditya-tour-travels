@@ -44,7 +44,7 @@ export default function Header() {
           <nav className="hidden md:flex items-center gap-6 font-semibold text-sm">
             <Link href={"/"}>
               <span className="cursor-pointer flex items-center gap-1">
-                Home <IoIosArrowDown className="text-xs" />
+                Home
               </span>
             </Link>
             <Link href={"/about"}>
