@@ -14,7 +14,7 @@ const adminRouters = require('./routers/adminRouters');
 const corsOptions = {
   origin: function (origin, callback) {
     const allowedOrigins = [
-      "http://localhost:3000",
+      // "http://localhost:3000",
       "https://aditya-tour-travels.vercel.app"
     ];
     if (!origin || allowedOrigins.includes(origin)) {
